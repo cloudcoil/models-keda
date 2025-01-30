@@ -200,7 +200,7 @@ test = [
 
 [[package]]
 name = "cloudcoil-models-keda"
-version = "0.0.0"
+version = "2.16.1.0"
 source = { editable = "." }
 dependencies = [
     { name = "cloudcoil" },

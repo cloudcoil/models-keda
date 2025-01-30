@@ -1,6 +1,6 @@
 [project]
 name = "cloudcoil.models.keda"
-version = "0.0.0"
+version = "2.16.1.0"
 description = "Versioned keda models for cloudcoil"
 authors = [{ name = "Sambhav Kothari", email = "sambhavs.email@gmail.com" }]
 maintainers = [{ name = "Sambhav Kothari", email = "sambhavs.email@gmail.com" }]
