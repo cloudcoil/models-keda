@@ -1,6 +1,11 @@
 # cloudcoil-models-keda
 
 Versioned keda models for cloudcoil.
+
+[![PyPI](https://img.shields.io/pypi/v/cloudcoil.models.keda.svg)](https://pypi.python.org/pypi/cloudcoil.models.keda)
+[![Downloads](https://static.pepy.tech/badge/cloudcoil.models.keda)](https://pepy.tech/project/cloudcoil.models.keda)
+[![License: Apache-2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/license/apache-2-0/)
+[![CI](https://github.com/cloudcoil/models-keda/actions/workflows/ci.yml/badge.svg)](https://github.com/cloudcoil/models-keda/actions/workflows/ci.yml)
 > [!WARNING]  
 > This repository is auto-generated from the [cloudcoil repository](https://github.com/cloudcoil/cloudcoil/tree/main/models/keda). Please do not submit pull requests here. Instead, submit them to the main repository at https://github.com/cloudcoil/cloudcoil.
 
