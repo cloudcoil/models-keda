@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        model_version: ['2.16.1']
+        model_version: ['2.20.2']
 
     steps:
       - uses: actions/checkout@v4
@@ -33,13 +33,14 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.CI_GITHUB_TOKEN }}
         run: |
-          uv add cloudcoil -U
+          uv lock --upgrade-package cloudcoil
           VERSION="${{ matrix.model_version }}.0"
           MINOR_VERSION=$(echo "${{ matrix.model_version }}" | cut -d'.' -f1,2)
           BRANCH="release-${MINOR_VERSION}"
           # Update version and input URL using sed
           sed -i "s/^version = .*/version = \"${VERSION}\"/" pyproject.toml
           sed -i "s|releases/download/v[0-9]\+\.[0-9]\+\.[0-9]\+/|releases/download/v${{ matrix.model_version }}/|" pyproject.toml
+          sed -i "s|keda-[0-9]\+\.[0-9]\+\.[0-9]\+-crds.yaml|keda-${{ matrix.model_version }}-crds.yaml|" pyproject.toml
           # Generate models
           make gen-models
 
